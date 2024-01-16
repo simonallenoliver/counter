@@ -6,7 +6,7 @@ app.secret_key = 'keep it secret, keep it safe' # set a secret key for security 
 @app.route('/')
 def index():
     session['visits'] = session.get('visits', 0) + 1
-    return render_template('index.html', visits=session['visits'])
+    return render_template('index.html', visits = session['visits'])
 
 @app.route('/destroy_session')
 def destroy_session():
